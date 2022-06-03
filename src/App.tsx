@@ -8,7 +8,7 @@ import { getAuth } from "firebase/auth";
 
 function App() {
   const auth = getAuth();
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   return (
     <BrowserRouter>
