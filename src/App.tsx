@@ -5,9 +5,10 @@ import LoginPage from "./pages/login/Login.page";
 import { BrowserRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { getAuth } from "firebase/auth";
+import app from "./config/firebase";
 
 function App() {
-  const auth = getAuth();
+  const auth = getAuth(app);
   const [user] = useAuthState(auth);
 
   return (

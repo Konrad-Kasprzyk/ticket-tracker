@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 
-initializeApp({
+export default initializeApp({
   apiKey: "AIzaSyCWGDGm4JGCeYF-byBzHMV90PiK1iJCTCw",
   authDomain: "ticket-tracker-dev.firebaseapp.com",
   projectId: "ticket-tracker-dev",

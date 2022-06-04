@@ -7,7 +7,7 @@ type Props = {
   icon?: string;
   label?: string;
   arrow?: boolean;
-  position?: "left" | "right";
+  expandTo?: "left" | "right";
   children?: ReactElement<typeof DropdownItem> | Array<ReactElement<typeof DropdownItem>>;
 };
 
@@ -20,7 +20,7 @@ type Props = {
  * @param arrow Render arrow pointing down in dropdown button.
  * @param position Dropdown menu should expand to bottom-left or bottom-right.
  */
-function Dropdown({ children, icon, label = "", arrow = false, position = "left" }: Props) {
+function Dropdown({ children, icon, label = "", arrow = false, expandTo = "right" }: Props) {
   const ref = useRef<HTMLButtonElement>(null);
   const isButtonRefClicked = useClickAlerter(ref);
   const [isButtonClickedAgain, setIsButtonClickedAgain] = useState(false);
@@ -30,7 +30,7 @@ function Dropdown({ children, icon, label = "", arrow = false, position = "left"
   }, [isButtonRefClicked]);
 
   return (
-    <>
+    <div className="DropdownContainer">
       <button
         className="DropdownButton"
         ref={ref}
@@ -45,9 +45,11 @@ function Dropdown({ children, icon, label = "", arrow = false, position = "left"
         )}
       </button>
       {isButtonRefClicked && !isButtonClickedAgain && (
-        <div className="DropdownContent">{children}</div>
+        <div className="DropdownContent" style={expandTo == "left" ? { right: 0 } : {}}>
+          {children}
+        </div>
       )}
-    </>
+    </div>
   );
 }
 

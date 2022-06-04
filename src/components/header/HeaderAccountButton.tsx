@@ -1,14 +1,15 @@
 import React from "react";
 import account from "../../assets/account.svg";
 import Dropdown from "../common/Dropdown";
+import DropdownItem from "../common/DropdownItem";
 import "./HeaderAccountButton.css";
 
 function NavbarAccountButton() {
   return (
     <div className="HeaderAccountButton">
-      <Dropdown icon={account}>
-        <div>cos</div>
-        <div>cos2</div>
+      <Dropdown icon={account} expandTo="left">
+        <DropdownItem label="link 1" />
+        <DropdownItem label="link 2" />
       </Dropdown>
     </div>
   );
