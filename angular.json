@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -96,12 +97,26 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ticket-tracker:build:production",
+            "firebaseProject": "ticket-tracker-dev",
+            "firebaseHostingSite": "ticket-tracker-dev"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "47391ba2-9197-4203-9a0d-acf6fae68ee6"
   }
 }

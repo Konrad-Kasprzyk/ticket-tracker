@@ -1,0 +1,5 @@
+<button (click)="toggleDropdown()">toggle dropdown</button>
+
+<div *ngIf="showDropdown">
+  <ng-content select="app-dropdown-item"></ng-content>
+</div>
