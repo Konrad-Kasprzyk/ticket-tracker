@@ -1,0 +1,9 @@
+.HeaderAccountButton {
+  background-color: aqua;
+  padding: 0;
+  margin: auto;
+  aspect-ratio: 1 / 1;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 80%;
+}

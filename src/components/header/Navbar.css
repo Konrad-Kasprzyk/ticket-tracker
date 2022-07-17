@@ -1,0 +1,19 @@
+.Navbar {
+  text-align: center;
+}
+
+.small .Navbar {
+  background-color: blue;
+}
+
+.medium .Navbar {
+  background-color: red;
+}
+
+.large .Navbar {
+  background-color: pink;
+}
+
+.extra_large .Navbar {
+  background-color: yellowgreen;
+}
