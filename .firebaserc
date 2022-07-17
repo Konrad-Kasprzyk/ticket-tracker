@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ticket-tracker-dev": {
+      "hosting": {
+        "ticket-tracker": [
+          "ticket-tracker-dev"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ticket-tracker-dev"
+  }
+}

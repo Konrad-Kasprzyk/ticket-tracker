@@ -1,0 +1,22 @@
+.Button {
+  background-color: inherit;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.Button * {
+  margin: 10%;
+  height: 80%;
+  width: 80%;
+
+  font-size: 1rem;
+  font-weight: bold;
+}
+.Button:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
